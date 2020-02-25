@@ -1,0 +1,891 @@
+Local Timestamp: 25-Feb-2020 (15:09:10.757280)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777Connection: keep-aliveUpgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36Sec-Fetch-User: ?1Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: noneSec-Fetch-Mode: navigateAccept-Encoding: gzip, deflate, brAccept-Language: en-US,en;q=0.9,ro;q=0.8
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: People only get jealous when they care.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'rF15wSGbUDs', 'created_at': '2019-02-04T04:25:11-05:00', 'updated_at': '2019-10-02T13:44:59-04:00', 'promoted_at': None, 'width': 5472, 'height': 3286, 'color': '#FFC153', 'description': None, 'alt_description': 'snow covered mountain under cloudy sky', 'urls': {'raw': 'https://images.unsplash.com/photo-1549272234-123ee6d296ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1549272234-123ee6d296ef?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1549272234-123ee6d296ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1549272234-123ee6d296ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1549272234-123ee6d296ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/rF15wSGbUDs', 'html': 'https://unsplash.com/photos/rF15wSGbUDs', 'download': 'https://unsplash.com/photos/rF15wSGbUDs/download', 'download_location': 'https://api.unsplash.com/photos/rF15wSGbUDs/download'}, 'categories': [], 'likes': 1, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'gqFDbsRsZFM', 'updated_at': '2020-02-17T10:22:50-05:00', 'username': 'brunettoziosi', 'name': 'brunetto ziosi', 'first_name': 'brunetto', 'last_name': 'ziosi', 'twitter_username': 'brunettoziosi', 'portfolio_url': 'http://brunettoziosi.com', 'bio': 'A life form based on taralli and beer, dev at Pixartprinting, survived a PhD in Astrophysics, traveler, geek, wannabe photographer.', 'location': 'Venice, Italy', 'links': {'self': 'https://api.unsplash.com/users/brunettoziosi', 'html': 'https://unsplash.com/@brunettoziosi', 'photos': 'https://api.unsplash.com/users/brunettoziosi/photos', 'likes': 'https://api.unsplash.com/users/brunettoziosi/likes', 'portfolio': 'https://api.unsplash.com/users/brunettoziosi/portfolio', 'following': 'https://api.unsplash.com/users/brunettoziosi/following', 'followers': 'https://api.unsplash.com/users/brunettoziosi/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1566152524728-df5d964f1ca6image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1566152524728-df5d964f1ca6image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1566152524728-df5d964f1ca6image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'brunetto.ziosi', 'total_collections': 4, 'total_likes': 514, 'total_photos': 113, 'accepted_tos': True}, 'exif': {'make': 'Canon', 'model': 'Canon EOS 70D', 'exposure_time': '1/1250', 'aperture': '8.0', 'focal_length': '69.0', 'iso': 100}, 'location': {'title': 'Tre Cime di Lavaredo', 'name': 'Tre Cime di Lavaredo', 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 228528, 'downloads': 172}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'People only get jealous when they care.', 'image': 'https://images.unsplash.com/photo-1549272234-123ee6d296ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/txnbgBV.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.3382294178009033
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:09:15.685386)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777Connection: keep-aliveCache-Control: max-age=0Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36Sec-Fetch-User: ?1Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Sec-Fetch-Site: noneSec-Fetch-Mode: navigateAccept-Encoding: gzip, deflate, brAccept-Language: en-US,en;q=0.9,ro;q=0.8
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Have you ever thought you were in love with someone but then realized you were just staring in a mirror for 20 minutes?
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'YL5JVy9rL_E', 'created_at': '2020-02-23T18:46:57-05:00', 'updated_at': '2020-02-24T14:03:57-05:00', 'promoted_at': None, 'width': 5779, 'height': 3853, 'color': '#E2E6E7', 'description': 'Low lying fog on a sunny day - reminded me of scenes from Lord of the Rings. Shot from a zodiac boat.', 'alt_description': 'brown rocky mountain beside blue sea under white sky during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1582501367036-9bcec2db014e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1582501367036-9bcec2db014e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1582501367036-9bcec2db014e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1582501367036-9bcec2db014e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1582501367036-9bcec2db014e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/YL5JVy9rL_E', 'html': 'https://unsplash.com/photos/YL5JVy9rL_E', 'download': 'https://unsplash.com/photos/YL5JVy9rL_E/download', 'download_location': 'https://api.unsplash.com/photos/YL5JVy9rL_E/download'}, 'categories': [], 'likes': 1, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': '82DdB0gTyTM', 'updated_at': '2020-02-24T08:10:23-05:00', 'username': 'rodlong', 'name': 'Rod Long', 'first_name': 'Rod', 'last_name': 'Long', 'twitter_username': 'rodlong_', 'portfolio_url': None, 'bio': 'An amateur doing the best he can. Never too old to learn. \r\nSony a9, Sony A6500, iPhone, DJI Mavic Pro Drone, DJI Osmo Action', 'location': 'Sydney, Australia', 'links': {'self': 'https://api.unsplash.com/users/rodlong', 'html': 'https://unsplash.com/@rodlong', 'photos': 'https://api.unsplash.com/users/rodlong/photos', 'likes': 'https://api.unsplash.com/users/rodlong/likes', 'portfolio': 'https://api.unsplash.com/users/rodlong/portfolio', 'following': 'https://api.unsplash.com/users/rodlong/following', 'followers': 'https://api.unsplash.com/users/rodlong/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1448226825466-5621a0400ce5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1448226825466-5621a0400ce5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1448226825466-5621a0400ce5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'rodlong', 'total_collections': 1, 'total_likes': 5, 'total_photos': 169, 'accepted_tos': True}, 'exif': {'make': 'SONY', 'model': 'ILCE-9', 'exposure_time': '1/3200', 'aperture': '9', 'focal_length': '100.0', 'iso': 640}, 'location': {'title': 'Elephant Island, Antarctica', 'name': 'Elephant Island, Antarctica', 'city': None, 'country': 'Antarctica', 'position': {'latitude': -61.1125817, 'longitude': -55.1402233}}, 'views': 362, 'downloads': 6}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Have you ever thought you were in love with someone but then realized you were just staring in a mirror for 20 minutes?', 'image': 'https://images.unsplash.com/photo-1582501367036-9bcec2db014e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/DQemmjm.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.2197635173797607
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:32:39.090884)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Believe in your flyness...conquer your shyness.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'v6JT5iV_gcc', 'created_at': '2020-01-20T16:57:22-05:00', 'updated_at': '2020-02-21T00:02:51-05:00', 'promoted_at': '2020-01-21T04:24:02-05:00', 'width': 4446, 'height': 5558, 'color': '#0D1815', 'description': None, 'alt_description': 'brown mountain under white clouds during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1579557380231-de34cb12fcd4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1579557380231-de34cb12fcd4?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1579557380231-de34cb12fcd4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1579557380231-de34cb12fcd4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1579557380231-de34cb12fcd4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/v6JT5iV_gcc', 'html': 'https://unsplash.com/photos/v6JT5iV_gcc', 'download': 'https://unsplash.com/photos/v6JT5iV_gcc/download', 'download_location': 'https://api.unsplash.com/photos/v6JT5iV_gcc/download'}, 'categories': [], 'likes': 107, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'sYdtMb06dNM', 'updated_at': '2020-02-19T14:11:56-05:00', 'username': 'ralics', 'name': 'Christopher Rusev', 'first_name': 'Christopher', 'last_name': 'Rusev', 'twitter_username': 'ralics', 'portfolio_url': 'http://www.instagram.com/ralics', 'bio': 'Shutter sound and coffee addict. \r\nwww.instagram.com/ralics', 'location': 'London, UK', 'links': {'self': 'https://api.unsplash.com/users/ralics', 'html': 'https://unsplash.com/@ralics', 'photos': 'https://api.unsplash.com/users/ralics/photos', 'likes': 'https://api.unsplash.com/users/ralics/likes', 'portfolio': 'https://api.unsplash.com/users/ralics/portfolio', 'following': 'https://api.unsplash.com/users/ralics/following', 'followers': 'https://api.unsplash.com/users/ralics/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1525898994788-3bd3da53e9d7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1525898994788-3bd3da53e9d7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1525898994788-3bd3da53e9d7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'ralics', 'total_collections': 6, 'total_likes': 29, 'total_photos': 78, 'accepted_tos': True}, 'exif': {'make': 'NIKON CORPORATION', 'model': 'NIKON D810', 'exposure_time': '1/80', 'aperture': '5', 'focal_length': '24.0', 'iso': 250}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 717688, 'downloads': 2037}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Believe in your flyness...conquer your shyness.', 'image': 'https://images.unsplash.com/photo-1579557380231-de34cb12fcd4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/VZZBlej.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.172260046005249
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:33:15.101679)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Perhaps I should have been more like water today
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'FsUlvzWn154', 'created_at': '2019-09-11T21:05:00-04:00', 'updated_at': '2019-12-28T00:06:23-05:00', 'promoted_at': None, 'width': 2744, 'height': 3662, 'color': '#E5D6D3', 'description': None, 'alt_description': 'high angle photo of cityscape', 'urls': {'raw': 'https://images.unsplash.com/photo-1568250250359-bf99844517b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1568250250359-bf99844517b3?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1568250250359-bf99844517b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1568250250359-bf99844517b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1568250250359-bf99844517b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/FsUlvzWn154', 'html': 'https://unsplash.com/photos/FsUlvzWn154', 'download': 'https://unsplash.com/photos/FsUlvzWn154/download', 'download_location': 'https://api.unsplash.com/photos/FsUlvzWn154/download'}, 'categories': [], 'likes': 10, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': '-myGpytHnPo', 'updated_at': '2020-02-23T20:06:45-05:00', 'username': 'jontyson', 'name': 'Jon Tyson', 'first_name': 'Jon', 'last_name': 'Tyson', 'twitter_username': 'jontyson', 'portfolio_url': 'http://primalpath.co', 'bio': 'My cup overflows. \r\nwww.fathers.co \r\nwww.church.nyc', 'location': 'New York City', 'links': {'self': 'https://api.unsplash.com/users/jontyson', 'html': 'https://unsplash.com/@jontyson', 'photos': 'https://api.unsplash.com/users/jontyson/photos', 'likes': 'https://api.unsplash.com/users/jontyson/likes', 'portfolio': 'https://api.unsplash.com/users/jontyson/portfolio', 'following': 'https://api.unsplash.com/users/jontyson/following', 'followers': 'https://api.unsplash.com/users/jontyson/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1528230399047-c8d0d832ed9d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1528230399047-c8d0d832ed9d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1528230399047-c8d0d832ed9d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'jontyson', 'total_collections': 0, 'total_likes': 99, 'total_photos': 2363, 'accepted_tos': True}, 'exif': {'make': 'Apple', 'model': 'iPhone XS Max', 'exposure_time': '1/705', 'aperture': '2.4', 'focal_length': '6.0', 'iso': 16}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 56002, 'downloads': 265}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Perhaps I should have been more like water today', 'image': 'https://images.unsplash.com/photo-1568250250359-bf99844517b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/32vI4R8.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 4.1704394817352295
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:35:56.140044)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I'm a creative genius
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '11cvx-KcGRw', 'created_at': '2020-01-29T11:06:48-05:00', 'updated_at': '2020-02-14T00:03:50-05:00', 'promoted_at': '2020-01-29T15:57:02-05:00', 'width': 1979, 'height': 2968, 'color': '#04121C', 'description': None, 'alt_description': 'white and black abstract painting', 'urls': {'raw': 'https://images.unsplash.com/photo-1580313708869-bd3c1417b0d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1580313708869-bd3c1417b0d3?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1580313708869-bd3c1417b0d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1580313708869-bd3c1417b0d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1580313708869-bd3c1417b0d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/11cvx-KcGRw', 'html': 'https://unsplash.com/photos/11cvx-KcGRw', 'download': 'https://unsplash.com/photos/11cvx-KcGRw/download', 'download_location': 'https://api.unsplash.com/photos/11cvx-KcGRw/download'}, 'categories': [], 'likes': 39, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'X2EeeCy9pTs', 'updated_at': '2020-02-14T11:14:59-05:00', 'username': 'janke', 'name': 'Janke Laskowski', 'first_name': 'Janke', 'last_name': 'Laskowski', 'twitter_username': None, 'portfolio_url': None, 'bio': None, 'location': 'Poland', 'links': {'self': 'https://api.unsplash.com/users/janke', 'html': 'https://unsplash.com/@janke', 'photos': 'https://api.unsplash.com/users/janke/photos', 'likes': 'https://api.unsplash.com/users/janke/likes', 'portfolio': 'https://api.unsplash.com/users/janke/portfolio', 'following': 'https://api.unsplash.com/users/janke/following', 'followers': 'https://api.unsplash.com/users/janke/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1563744034202-db96832afdfa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1563744034202-db96832afdfa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1563744034202-db96832afdfa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'jankephoto', 'total_collections': 0, 'total_likes': 3, 'total_photos': 51, 'accepted_tos': True}, 'exif': {'make': 'DJI', 'model': 'FC2103', 'exposure_time': '1/60', 'aperture': '2.8', 'focal_length': '4.5', 'iso': 100}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 367501, 'downloads': 581}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "I'm a creative genius", 'image': 'https://images.unsplash.com/photo-1580313708869-bd3c1417b0d3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/McJkn1L.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.5232961177825928
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:36:28.698867)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I leave my emojis bart Simpson color
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'WZG94F4kuIU', 'created_at': '2020-01-05T18:46:25-05:00', 'updated_at': '2020-02-14T00:05:52-05:00', 'promoted_at': None, 'width': 2250, 'height': 4000, 'color': '#DBE5E5', 'description': 'Top done drone photo of the Royal Liver Building, Liverpool UK', 'alt_description': 'aerial photography of high-rise buildings', 'urls': {'raw': 'https://images.unsplash.com/photo-1578267955605-f8f01b9979e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1578267955605-f8f01b9979e7?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1578267955605-f8f01b9979e7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1578267955605-f8f01b9979e7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1578267955605-f8f01b9979e7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/WZG94F4kuIU', 'html': 'https://unsplash.com/photos/WZG94F4kuIU', 'download': 'https://unsplash.com/photos/WZG94F4kuIU/download', 'download_location': 'https://api.unsplash.com/photos/WZG94F4kuIU/download'}, 'categories': [], 'likes': 3, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'ilL4ZEa-B3U', 'updated_at': '2020-01-26T19:32:58-05:00', 'username': 'pk_drone', 'name': 'Phil Kiel', 'first_name': 'Phil', 'last_name': 'Kiel', 'twitter_username': 'PhilKiel', 'portfolio_url': None, 'bio': 'Aerial photos of Liverpool, Wirral and the North West of England. ', 'location': 'Liverpool, UK', 'links': {'self': 'https://api.unsplash.com/users/pk_drone', 'html': 'https://unsplash.com/@pk_drone', 'photos': 'https://api.unsplash.com/users/pk_drone/photos', 'likes': 'https://api.unsplash.com/users/pk_drone/likes', 'portfolio': 'https://api.unsplash.com/users/pk_drone/portfolio', 'following': 'https://api.unsplash.com/users/pk_drone/following', 'followers': 'https://api.unsplash.com/users/pk_drone/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1553210349531-fbf9e26305c6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1553210349531-fbf9e26305c6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1553210349531-fbf9e26305c6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'pk.drone', 'total_collections': 0, 'total_likes': 7, 'total_photos': 33, 'accepted_tos': True}, 'exif': {'make': 'DJI', 'model': 'FC220', 'exposure_time': '1/109', 'aperture': '2.2', 'focal_length': '4.7', 'iso': 100}, 'location': {'title': 'Liverpool, Liverpool, United Kingdom', 'name': 'Liverpool, Liverpool, United Kingdom', 'city': 'Liverpool', 'country': 'United Kingdom', 'position': {'latitude': 53.4068671, 'longitude': -2.9915074}}, 'views': 8303, 'downloads': 65}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'I leave my emojis bart Simpson color', 'image': 'https://images.unsplash.com/photo-1578267955605-f8f01b9979e7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/k7ydFvY.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.2277188301086426
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:39:36.333203)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Shut the fuck up I will fucking laser you with alien fucking eyes and explode your fucking head
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '6wyq74pgCiQ', 'created_at': '2019-08-12T12:39:42-04:00', 'updated_at': '2020-02-21T00:06:32-05:00', 'promoted_at': '2019-08-13T01:28:17-04:00', 'width': 4000, 'height': 6000, 'color': '#E6E6DC', 'description': 'Greeter Falls', 'alt_description': 'waterfalls surrounded with tall and green trees', 'urls': {'raw': 'https://images.unsplash.com/photo-1565627945040-53d1ca591771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1565627945040-53d1ca591771?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1565627945040-53d1ca591771?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1565627945040-53d1ca591771?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1565627945040-53d1ca591771?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/6wyq74pgCiQ', 'html': 'https://unsplash.com/photos/6wyq74pgCiQ', 'download': 'https://unsplash.com/photos/6wyq74pgCiQ/download', 'download_location': 'https://api.unsplash.com/photos/6wyq74pgCiQ/download'}, 'categories': [], 'likes': 81, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'bNoOlRYzR6M', 'updated_at': '2020-01-07T22:20:05-05:00', 'username': 'the_briggles', 'name': 'Briggs Boyd', 'first_name': 'Briggs', 'last_name': 'Boyd', 'twitter_username': 'the_briggles', 'portfolio_url': None, 'bio': 'I have two left knees', 'location': 'Springfield, Missouri', 'links': {'self': 'https://api.unsplash.com/users/the_briggles', 'html': 'https://unsplash.com/@the_briggles', 'photos': 'https://api.unsplash.com/users/the_briggles/photos', 'likes': 'https://api.unsplash.com/users/the_briggles/likes', 'portfolio': 'https://api.unsplash.com/users/the_briggles/portfolio', 'following': 'https://api.unsplash.com/users/the_briggles/following', 'followers': 'https://api.unsplash.com/users/the_briggles/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1565491514973-51ead2f6028e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1565491514973-51ead2f6028e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1565491514973-51ead2f6028e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'the_briggles', 'total_collections': 1, 'total_likes': 0, 'total_photos': 22, 'accepted_tos': True}, 'exif': {'make': 'SONY', 'model': 'ILCE-7M3', 'exposure_time': '1/1000', 'aperture': '5.0', 'focal_length': '55.0', 'iso': 500}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 130475, 'downloads': 733}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Shut the fuck up I will fucking laser you with alien fucking eyes and explode your fucking head', 'image': 'https://images.unsplash.com/photo-1565627945040-53d1ca591771?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/xbtRLFB.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 5.717021465301514
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:43:49.583906)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: People only get jealous when they care.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'z1quwuaZ3Q8', 'created_at': '2019-04-11T11:17:12-04:00', 'updated_at': '2019-12-21T00:04:48-05:00', 'promoted_at': None, 'width': 2992, 'height': 3990, 'color': '#EFDDD3', 'description': None, 'alt_description': 'amusement park facing ocean and town', 'urls': {'raw': 'https://images.unsplash.com/photo-1554995794-6591601e088b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1554995794-6591601e088b?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1554995794-6591601e088b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1554995794-6591601e088b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1554995794-6591601e088b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/z1quwuaZ3Q8', 'html': 'https://unsplash.com/photos/z1quwuaZ3Q8', 'download': 'https://unsplash.com/photos/z1quwuaZ3Q8/download', 'download_location': 'https://api.unsplash.com/photos/z1quwuaZ3Q8/download'}, 'categories': [], 'likes': 20, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'lU6erYKNlwg', 'updated_at': '2020-02-24T16:13:29-05:00', 'username': 'xavi_cabrera', 'name': 'Xavi Cabrera', 'first_name': 'Xavi', 'last_name': 'Cabrera', 'twitter_username': 'cabrera_photo', 'portfolio_url': 'https://500px.com/xavicabrera', 'bio': 'amateur photograph from Barcelona. Learning...\r\ninsta: @xavicabreraf', 'location': 'Barberà del Vallès (BCN)', 'links': {'self': 'https://api.unsplash.com/users/xavi_cabrera', 'html': 'https://unsplash.com/@xavi_cabrera', 'photos': 'https://api.unsplash.com/users/xavi_cabrera/photos', 'likes': 'https://api.unsplash.com/users/xavi_cabrera/likes', 'portfolio': 'https://api.unsplash.com/users/xavi_cabrera/portfolio', 'following': 'https://api.unsplash.com/users/xavi_cabrera/following', 'followers': 'https://api.unsplash.com/users/xavi_cabrera/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1563283044133-32f41c6fe606?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1563283044133-32f41c6fe606?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1563283044133-32f41c6fe606?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'xavicabreraf', 'total_collections': 0, 'total_likes': 23, 'total_photos': 31, 'accepted_tos': True}, 'exif': {'make': 'RICOH IMAGING COMPANY, LTD.', 'model': 'PENTAX K-70', 'exposure_time': '1/800', 'aperture': '6.3', 'focal_length': '21.0', 'iso': 800}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 42285, 'downloads': 409}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'People only get jealous when they care.', 'image': 'https://images.unsplash.com/photo-1554995794-6591601e088b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/IBlCItY.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.6483163833618164
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:44:46.300776)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: 2024
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'OiRTwOIDRek', 'created_at': '2019-05-25T21:40:38-04:00', 'updated_at': '2020-02-21T00:06:27-05:00', 'promoted_at': '2019-05-27T02:59:42-04:00', 'width': 6016, 'height': 4016, 'color': '#F8CFA3', 'description': None, 'alt_description': 'brown canyon cave', 'urls': {'raw': 'https://images.unsplash.com/photo-1558834644-d3aa3dd1a89d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1558834644-d3aa3dd1a89d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1558834644-d3aa3dd1a89d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1558834644-d3aa3dd1a89d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1558834644-d3aa3dd1a89d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/OiRTwOIDRek', 'html': 'https://unsplash.com/photos/OiRTwOIDRek', 'download': 'https://unsplash.com/photos/OiRTwOIDRek/download', 'download_location': 'https://api.unsplash.com/photos/OiRTwOIDRek/download'}, 'categories': [], 'likes': 41, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': '5StDdLjosKM', 'updated_at': '2020-02-14T09:11:29-05:00', 'username': 'scottosbornphoto', 'name': 'Scott Osborn', 'first_name': 'Scott', 'last_name': 'Osborn', 'twitter_username': None, 'portfolio_url': 'http://scottosbornphoto.com', 'bio': 'Follow me on Instagram: ScottOsbornPhoto ====== Nikon Z6. Landscapes. Wildlife. Portraits. Sport.', 'location': None, 'links': {'self': 'https://api.unsplash.com/users/scottosbornphoto', 'html': 'https://unsplash.com/@scottosbornphoto', 'photos': 'https://api.unsplash.com/users/scottosbornphoto/photos', 'likes': 'https://api.unsplash.com/users/scottosbornphoto/likes', 'portfolio': 'https://api.unsplash.com/users/scottosbornphoto/portfolio', 'following': 'https://api.unsplash.com/users/scottosbornphoto/following', 'followers': 'https://api.unsplash.com/users/scottosbornphoto/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-fb-1556944129-cbe7396fe604.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-fb-1556944129-cbe7396fe604.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-fb-1556944129-cbe7396fe604.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'ScottOsbornPhoto', 'total_collections': 1, 'total_likes': 85, 'total_photos': 74, 'accepted_tos': True}, 'exif': {'make': 'NIKON CORPORATION', 'model': 'NIKON D610', 'exposure_time': '1/125', 'aperture': '5.6', 'focal_length': '16.0', 'iso': 1250}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 274440, 'downloads': 2259}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': '2024', 'image': 'https://images.unsplash.com/photo-1558834644-d3aa3dd1a89d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/CRLKhZP.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.4097156524658203
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:48:58.555149)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: For me, money is not my definition of success. Inspiring people is a definition of success
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '16hZ8SDJ8mw', 'created_at': '2019-08-26T12:44:16-04:00', 'updated_at': '2019-12-21T00:04:32-05:00', 'promoted_at': None, 'width': 3328, 'height': 8000, 'color': '#242920', 'description': None, 'alt_description': 'top view of road between trees', 'urls': {'raw': 'https://images.unsplash.com/photo-1566837552249-4fb460d71e2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1566837552249-4fb460d71e2f?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1566837552249-4fb460d71e2f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1566837552249-4fb460d71e2f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1566837552249-4fb460d71e2f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/16hZ8SDJ8mw', 'html': 'https://unsplash.com/photos/16hZ8SDJ8mw', 'download': 'https://unsplash.com/photos/16hZ8SDJ8mw/download', 'download_location': 'https://api.unsplash.com/photos/16hZ8SDJ8mw/download'}, 'categories': [], 'likes': 5, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'Lq1AhgxaGFU', 'updated_at': '2020-02-20T18:43:28-05:00', 'username': 'serjosoza', 'name': 'sergio souza', 'first_name': 'sergio', 'last_name': 'souza', 'twitter_username': 'serjosoza', 'portfolio_url': 'http://www.instagram.com/serjosoza', 'bio': 'Fotografias livres para usar como quiser, apenas marquem meu instagram quando fizerem. Obrigado. ', 'location': 'São Paulo / Brasil', 'links': {'self': 'https://api.unsplash.com/users/serjosoza', 'html': 'https://unsplash.com/@serjosoza', 'photos': 'https://api.unsplash.com/users/serjosoza/photos', 'likes': 'https://api.unsplash.com/users/serjosoza/likes', 'portfolio': 'https://api.unsplash.com/users/serjosoza/portfolio', 'following': 'https://api.unsplash.com/users/serjosoza/following', 'followers': 'https://api.unsplash.com/users/serjosoza/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1497279102992-6ea2220f00e2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1497279102992-6ea2220f00e2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1497279102992-6ea2220f00e2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'serjosoza', 'total_collections': 3, 'total_likes': 649, 'total_photos': 2301, 'accepted_tos': True}, 'exif': {'make': 'Hasselblad', 'model': 'L1D-20c', 'exposure_time': '1/80', 'aperture': '4.0', 'focal_length': '10.3', 'iso': 100}, 'location': {'title': 'Alameda Von Martius - Parque do Estado, São Paulo - SP, 04301-902, Brazil, Parque do Estado', 'name': 'Alameda Von Martius - Parque do Estado, São Paulo - SP, 04301-902, Brazil, Parque do Estado', 'city': 'Parque do Estado', 'country': 'Brazil', 'position': {'latitude': -23.64339667, 'longitude': -46.625}}, 'views': 33674, 'downloads': 212}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'For me, money is not my definition of success. Inspiring people is a definition of success', 'image': 'https://images.unsplash.com/photo-1566837552249-4fb460d71e2f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/guFCxbC.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.538614511489868
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:49:11.974139)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I feel like I'm too busy writing history to read it.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'UQLSutozTms', 'created_at': '2019-02-04T05:43:52-05:00', 'updated_at': '2019-10-02T13:44:59-04:00', 'promoted_at': None, 'width': 4000, 'height': 3000, 'color': '#A5D6F9', 'description': 'Coolest spot, a must see. Need 4x4 to get there, but it’s a very cool spot.', 'alt_description': 'high-angle photography of blue sea beside green land', 'urls': {'raw': 'https://images.unsplash.com/photo-1549276756-8ca43f54f354?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1549276756-8ca43f54f354?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1549276756-8ca43f54f354?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1549276756-8ca43f54f354?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1549276756-8ca43f54f354?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/UQLSutozTms', 'html': 'https://unsplash.com/photos/UQLSutozTms', 'download': 'https://unsplash.com/photos/UQLSutozTms/download', 'download_location': 'https://api.unsplash.com/photos/UQLSutozTms/download'}, 'categories': [], 'likes': 25, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'KE_3tlitAIk', 'updated_at': '2020-02-16T15:01:48-05:00', 'username': 'mganeolsen', 'name': 'Michael Olsen', 'first_name': 'Michael', 'last_name': 'Olsen', 'twitter_username': 'mgolsen', 'portfolio_url': 'http://oceanlandsky.wordpress.com', 'bio': "Capturing beauty along my path of life. I don't go out of my way to take any photos, these shots are all where I am, while I'm doing things I love. Follow my adventures on Instagram. INTO THE BLUE with @mganeolsen ", 'location': 'HI - CAN - NYC - CALI - AUS ', 'links': {'self': 'https://api.unsplash.com/users/mganeolsen', 'html': 'https://unsplash.com/@mganeolsen', 'photos': 'https://api.unsplash.com/users/mganeolsen/photos', 'likes': 'https://api.unsplash.com/users/mganeolsen/likes', 'portfolio': 'https://api.unsplash.com/users/mganeolsen/portfolio', 'following': 'https://api.unsplash.com/users/mganeolsen/following', 'followers': 'https://api.unsplash.com/users/mganeolsen/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1521882084388-d35c168c457d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1521882084388-d35c168c457d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1521882084388-d35c168c457d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'mganeolsen', 'total_collections': 4, 'total_likes': 20, 'total_photos': 182, 'accepted_tos': True}, 'exif': {'make': 'DJI', 'model': 'FC300S', 'exposure_time': '1/800', 'aperture': '2.8', 'focal_length': '3.6', 'iso': 100}, 'location': {'title': 'Naalehu, HI 96772, USA, United States', 'name': 'Naalehu, HI 96772, USA, United States', 'city': 'Naalehu', 'country': 'United States', 'position': {'latitude': 18.93451833, 'longitude': -155.6451}}, 'views': 149123, 'downloads': 610}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "I feel like I'm too busy writing history to read it.", 'image': 'https://images.unsplash.com/photo-1549276756-8ca43f54f354?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/6BX7nIt.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.23630428314209
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:49:38.985409)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Believe in your flyness...conquer your shyness.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'PDAzh1rSIa8', 'created_at': '2019-01-28T10:37:26-05:00', 'updated_at': '2020-02-14T00:06:40-05:00', 'promoted_at': '2019-01-30T07:52:48-05:00', 'width': 2992, 'height': 3740, 'color': '#CCF3E9', 'description': None, 'alt_description': 'houses near cliff and body of water during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1548689551-5be7ab3f02c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1548689551-5be7ab3f02c4?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1548689551-5be7ab3f02c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1548689551-5be7ab3f02c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1548689551-5be7ab3f02c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/PDAzh1rSIa8', 'html': 'https://unsplash.com/photos/PDAzh1rSIa8', 'download': 'https://unsplash.com/photos/PDAzh1rSIa8/download', 'download_location': 'https://api.unsplash.com/photos/PDAzh1rSIa8/download'}, 'categories': [], 'likes': 159, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'rmLYJWWxYyI', 'updated_at': '2020-01-21T20:16:09-05:00', 'username': 'lucasmiguel', 'name': 'Lucas Miguel', 'first_name': 'Lucas', 'last_name': 'Miguel', 'twitter_username': None, 'portfolio_url': 'http://instagram.com/lucasmiguel', 'bio': 'I live in a Camper traveling around Europe and this is me trying to capture the experience the best way I can.                                                                                   \r\n', 'location': 'Who Knows', 'links': {'self': 'https://api.unsplash.com/users/lucasmiguel', 'html': 'https://unsplash.com/@lucasmiguel', 'photos': 'https://api.unsplash.com/users/lucasmiguel/photos', 'likes': 'https://api.unsplash.com/users/lucasmiguel/likes', 'portfolio': 'https://api.unsplash.com/users/lucasmiguel/portfolio', 'following': 'https://api.unsplash.com/users/lucasmiguel/following', 'followers': 'https://api.unsplash.com/users/lucasmiguel/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1531260090842-4c04c89bfb94?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1531260090842-4c04c89bfb94?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1531260090842-4c04c89bfb94?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'lucasmiguel', 'total_collections': 0, 'total_likes': 27, 'total_photos': 50, 'accepted_tos': True}, 'exif': {'make': 'DJI', 'model': 'FC220', 'exposure_time': '1/60', 'aperture': '2.2', 'focal_length': '4.7', 'iso': 100}, 'location': {'title': 'Via Renato Birolli, 168, 19017 Manarola SP, Italy, Manarola', 'name': 'Via Renato Birolli, 168, 19017 Manarola SP, Italy, Manarola', 'city': 'Manarola', 'country': 'Italy', 'position': {'latitude': 44.10776667, 'longitude': 9.72531167}}, 'views': 210398, 'downloads': 2514}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Believe in your flyness...conquer your shyness.', 'image': 'https://images.unsplash.com/photo-1548689551-5be7ab3f02c4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/CNV5E37.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.742737293243408
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:50:02.985649)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I give up drinking every week
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'IG00RyVHQDg', 'created_at': '2019-09-20T13:59:36-04:00', 'updated_at': '2019-10-14T12:44:56-04:00', 'promoted_at': None, 'width': 3024, 'height': 4032, 'color': '#383D4F', 'description': 'Home', 'alt_description': 'view of city from airplane window at daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1569002240523-637f936f7879?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1569002240523-637f936f7879?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1569002240523-637f936f7879?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1569002240523-637f936f7879?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1569002240523-637f936f7879?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/IG00RyVHQDg', 'html': 'https://unsplash.com/photos/IG00RyVHQDg', 'download': 'https://unsplash.com/photos/IG00RyVHQDg/download', 'download_location': 'https://api.unsplash.com/photos/IG00RyVHQDg/download'}, 'categories': [], 'likes': 1, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'Y2cYat-Ldr4', 'updated_at': '2020-02-17T17:59:29-05:00', 'username': 'katarina_g', 'name': 'Katarina G', 'first_name': 'Katarina', 'last_name': 'G', 'twitter_username': None, 'portfolio_url': None, 'bio': 'Hello, I am a 19 y/o amateur photographer. My passion is photographing the Environment, Nature, Wildlife, and Plants in their most natural state. I support all environmental protection acts.\r\nCheck out my Instagram @pure_nature18 ', 'location': 'United States', 'links': {'self': 'https://api.unsplash.com/users/katarina_g', 'html': 'https://unsplash.com/@katarina_g', 'photos': 'https://api.unsplash.com/users/katarina_g/photos', 'likes': 'https://api.unsplash.com/users/katarina_g/likes', 'portfolio': 'https://api.unsplash.com/users/katarina_g/portfolio', 'following': 'https://api.unsplash.com/users/katarina_g/following', 'followers': 'https://api.unsplash.com/users/katarina_g/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1581968153599-b2fa0d4024adimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1581968153599-b2fa0d4024adimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1581968153599-b2fa0d4024adimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'pure_nature18', 'total_collections': 9, 'total_likes': 117, 'total_photos': 125, 'accepted_tos': True}, 'exif': {'make': 'Apple', 'model': 'iPhone 7', 'exposure_time': '1/1368', 'aperture': '1.8', 'focal_length': '4.0', 'iso': 20}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 20211, 'downloads': 161}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'I give up drinking every week', 'image': 'https://images.unsplash.com/photo-1569002240523-637f936f7879?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/DF6SM5u.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.704463481903076
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:53:52.681710)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I feel like I'm too busy writing history to read it.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '6ELMRvIuJ1g', 'created_at': '2018-11-26T19:14:42-05:00', 'updated_at': '2019-10-02T13:29:57-04:00', 'promoted_at': '2018-11-27T07:38:54-05:00', 'width': 6048, 'height': 4024, 'color': '#D9CFCF', 'description': None, 'alt_description': "bird's-eye view photography of city", 'urls': {'raw': 'https://images.unsplash.com/photo-1543277669-34136c4c2a1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1543277669-34136c4c2a1a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1543277669-34136c4c2a1a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1543277669-34136c4c2a1a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1543277669-34136c4c2a1a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/6ELMRvIuJ1g', 'html': 'https://unsplash.com/photos/6ELMRvIuJ1g', 'download': 'https://unsplash.com/photos/6ELMRvIuJ1g/download', 'download_location': 'https://api.unsplash.com/photos/6ELMRvIuJ1g/download'}, 'categories': [], 'likes': 38, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'vsZait6dtqc', 'updated_at': '2020-02-24T10:22:44-05:00', 'username': 'chuttersnap', 'name': 'chuttersnap', 'first_name': 'chuttersnap', 'last_name': None, 'twitter_username': None, 'portfolio_url': 'http://www.instagram.com/chuttersnap', 'bio': 'Unsplash Ambassador // The CHUTTERSNAP Empire', 'location': 'Singapore', 'links': {'self': 'https://api.unsplash.com/users/chuttersnap', 'html': 'https://unsplash.com/@chuttersnap', 'photos': 'https://api.unsplash.com/users/chuttersnap/photos', 'likes': 'https://api.unsplash.com/users/chuttersnap/likes', 'portfolio': 'https://api.unsplash.com/users/chuttersnap/portfolio', 'following': 'https://api.unsplash.com/users/chuttersnap/following', 'followers': 'https://api.unsplash.com/users/chuttersnap/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1519037305094-44617d4cf506?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1519037305094-44617d4cf506?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1519037305094-44617d4cf506?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'chuttersnap', 'total_collections': 1, 'total_likes': 1364, 'total_photos': 2944, 'accepted_tos': True}, 'exif': {'make': 'NIKON CORPORATION', 'model': 'NIKON Z 6', 'exposure_time': '1/8', 'aperture': '1.4', 'focal_length': '85.0', 'iso': 100}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 349977, 'downloads': 2271}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "I feel like I'm too busy writing history to read it.", 'image': 'https://images.unsplash.com/photo-1543277669-34136c4c2a1a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/YCyq4ls.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.537665605545044
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:54:01.011672)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: People always tell you 'Be humble. Be humble.' When was the last time someone told you to be amazing? Be great! Be awesome! Be awesome!
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'TfRHSL2GKDc', 'created_at': '2019-02-23T16:22:22-05:00', 'updated_at': '2020-02-21T00:02:50-05:00', 'promoted_at': '2019-02-25T09:19:14-05:00', 'width': 2942, 'height': 3678, 'color': '#F5C53D', 'description': None, 'alt_description': 'skyscraper view', 'urls': {'raw': 'https://images.unsplash.com/photo-1550956917-84effe9bdbb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1550956917-84effe9bdbb9?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1550956917-84effe9bdbb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1550956917-84effe9bdbb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1550956917-84effe9bdbb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/TfRHSL2GKDc', 'html': 'https://unsplash.com/photos/TfRHSL2GKDc', 'download': 'https://unsplash.com/photos/TfRHSL2GKDc/download', 'download_location': 'https://api.unsplash.com/photos/TfRHSL2GKDc/download'}, 'categories': [], 'likes': 112, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'RzJZjacTGZc', 'updated_at': '2020-02-22T00:22:48-05:00', 'username': 'smnzhu', 'name': 'Simon Zhu', 'first_name': 'Simon', 'last_name': 'Zhu', 'twitter_username': None, 'portfolio_url': 'https://www.smnzhu.com/', 'bio': 'Urban / cityscape / nightscape photographer, urban explorer, and dreamer. Follow me @smnzhu on Instagram for more!', 'location': 'Vancouver, Canada', 'links': {'self': 'https://api.unsplash.com/users/smnzhu', 'html': 'https://unsplash.com/@smnzhu', 'photos': 'https://api.unsplash.com/users/smnzhu/photos', 'likes': 'https://api.unsplash.com/users/smnzhu/likes', 'portfolio': 'https://api.unsplash.com/users/smnzhu/portfolio', 'following': 'https://api.unsplash.com/users/smnzhu/following', 'followers': 'https://api.unsplash.com/users/smnzhu/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1536272917609-15221a21c8e6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1536272917609-15221a21c8e6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1536272917609-15221a21c8e6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'smnzhu', 'total_collections': 0, 'total_likes': 48, 'total_photos': 31, 'accepted_tos': True}, 'exif': {'make': None, 'model': None, 'exposure_time': None, 'aperture': None, 'focal_length': None, 'iso': None}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 446366, 'downloads': 2651}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "People always tell you 'Be humble. Be humble.' When was the last time someone told you to be amazing? Be great! Be awesome! Be awesome!", 'image': 'https://images.unsplash.com/photo-1550956917-84effe9bdbb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/ScbGc2Y.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.193227767944336
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:54:16.990341)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: One day I'm gon' marry a porn star
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'eAR5YqgHXgk', 'created_at': '2019-12-10T15:00:40-05:00', 'updated_at': '2020-01-07T00:08:22-05:00', 'promoted_at': None, 'width': 6000, 'height': 4000, 'color': '#DAF4F2', 'description': 'water splashes', 'alt_description': 'sea waves on gray rock formations', 'urls': {'raw': 'https://images.unsplash.com/photo-1576007754840-a61c64f70400?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1576007754840-a61c64f70400?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1576007754840-a61c64f70400?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1576007754840-a61c64f70400?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1576007754840-a61c64f70400?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/eAR5YqgHXgk', 'html': 'https://unsplash.com/photos/eAR5YqgHXgk', 'download': 'https://unsplash.com/photos/eAR5YqgHXgk/download', 'download_location': 'https://api.unsplash.com/photos/eAR5YqgHXgk/download'}, 'categories': [], 'likes': 4, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'nmnqTs7BgTc', 'updated_at': '2020-02-21T02:21:05-05:00', 'username': 'lo_sarno', 'name': 'Lo Sarno', 'first_name': 'Lo', 'last_name': 'Sarno', 'twitter_username': 'lo_sarno', 'portfolio_url': 'https://instagram.com/heylophotos', 'bio': 'sponsored in part by iced coffee', 'location': None, 'links': {'self': 'https://api.unsplash.com/users/lo_sarno', 'html': 'https://unsplash.com/@lo_sarno', 'photos': 'https://api.unsplash.com/users/lo_sarno/photos', 'likes': 'https://api.unsplash.com/users/lo_sarno/likes', 'portfolio': 'https://api.unsplash.com/users/lo_sarno/portfolio', 'following': 'https://api.unsplash.com/users/lo_sarno/following', 'followers': 'https://api.unsplash.com/users/lo_sarno/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1576008644164-a7aed1fe77dfimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1576008644164-a7aed1fe77dfimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1576008644164-a7aed1fe77dfimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'heylophotos', 'total_collections': 0, 'total_likes': 64, 'total_photos': 53, 'accepted_tos': True}, 'exif': {'make': 'Canon', 'model': 'Canon EOS Rebel T7i', 'exposure_time': '1/640', 'aperture': '3.2', 'focal_length': '50.0', 'iso': 100}, 'location': {'title': 'Black Sand Beach, Hana, HI, USA', 'name': 'Black Sand Beach, Hana, HI, USA', 'city': 'Hana', 'country': 'United States', 'position': {'latitude': 20.7886606, 'longitude': -156.0035712}}, 'views': 36796, 'downloads': 115}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "One day I'm gon' marry a porn star", 'image': 'https://images.unsplash.com/photo-1576007754840-a61c64f70400?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/op1oC26.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.4473788738250732
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (15:54:26.920367)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Burn that excel spread sheet
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '5vV1xgPPdoI', 'created_at': '2019-04-28T22:11:14-04:00', 'updated_at': '2020-02-21T00:03:49-05:00', 'promoted_at': '2019-04-29T07:31:25-04:00', 'width': 3406, 'height': 4258, 'color': '#FD752F', 'description': None, 'alt_description': 'cave during golden hour', 'urls': {'raw': 'https://images.unsplash.com/photo-1556503868-012fa6d205b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1556503868-012fa6d205b5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1556503868-012fa6d205b5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1556503868-012fa6d205b5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1556503868-012fa6d205b5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/5vV1xgPPdoI', 'html': 'https://unsplash.com/photos/5vV1xgPPdoI', 'download': 'https://unsplash.com/photos/5vV1xgPPdoI/download', 'download_location': 'https://api.unsplash.com/photos/5vV1xgPPdoI/download'}, 'categories': [], 'likes': 188, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'nujkpOj8vkw', 'updated_at': '2020-01-09T21:22:14-05:00', 'username': 'kiwithompson', 'name': 'kiwi thompson', 'first_name': 'kiwi', 'last_name': 'thompson', 'twitter_username': None, 'portfolio_url': 'http://kiwiphoto.net', 'bio': 'help me do this full time :)\r\n\r\nig: @kiwihermansplayhouse', 'location': None, 'links': {'self': 'https://api.unsplash.com/users/kiwithompson', 'html': 'https://unsplash.com/@kiwithompson', 'photos': 'https://api.unsplash.com/users/kiwithompson/photos', 'likes': 'https://api.unsplash.com/users/kiwithompson/likes', 'portfolio': 'https://api.unsplash.com/users/kiwithompson/portfolio', 'following': 'https://api.unsplash.com/users/kiwithompson/following', 'followers': 'https://api.unsplash.com/users/kiwithompson/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1555555381612-16656e764d12?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1555555381612-16656e764d12?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1555555381612-16656e764d12?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'kiwihermansplayhouse', 'total_collections': 10, 'total_likes': 26, 'total_photos': 21, 'accepted_tos': True}, 'exif': {'make': 'Sony', 'model': 'A7II', 'exposure_time': None, 'aperture': None, 'focal_length': '50.0', 'iso': None}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 1044918, 'downloads': 4552}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Burn that excel spread sheet', 'image': 'https://images.unsplash.com/photo-1556503868-012fa6d205b5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/HPNQHLA.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.722818374633789
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:03:58.292406)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Shut the fuck up I will fucking laser you with alien fucking eyes and explode your fucking head
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '5LvUEvhsU10', 'created_at': '2019-11-20T19:57:10-05:00', 'updated_at': '2019-11-22T14:01:19-05:00', 'promoted_at': None, 'width': 8643, 'height': 3680, 'color': '#F6F5F5', 'description': None, 'alt_description': 'white stone fragment', 'urls': {'raw': 'https://images.unsplash.com/photo-1574297817682-3c55b6ec1e9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1574297817682-3c55b6ec1e9e?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1574297817682-3c55b6ec1e9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1574297817682-3c55b6ec1e9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1574297817682-3c55b6ec1e9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/5LvUEvhsU10', 'html': 'https://unsplash.com/photos/5LvUEvhsU10', 'download': 'https://unsplash.com/photos/5LvUEvhsU10/download', 'download_location': 'https://api.unsplash.com/photos/5LvUEvhsU10/download'}, 'categories': [], 'likes': 9, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'yp4kjtsa9f0', 'updated_at': '2019-11-29T22:27:16-05:00', 'username': 'josemizrahi', 'name': 'Jose Mizrahi', 'first_name': 'Jose', 'last_name': 'Mizrahi', 'twitter_username': None, 'portfolio_url': None, 'bio': None, 'location': None, 'links': {'self': 'https://api.unsplash.com/users/josemizrahi', 'html': 'https://unsplash.com/@josemizrahi', 'photos': 'https://api.unsplash.com/users/josemizrahi/photos', 'likes': 'https://api.unsplash.com/users/josemizrahi/likes', 'portfolio': 'https://api.unsplash.com/users/josemizrahi/portfolio', 'following': 'https://api.unsplash.com/users/josemizrahi/following', 'followers': 'https://api.unsplash.com/users/josemizrahi/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1574175711372-fb3006bb39a0image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1574175711372-fb3006bb39a0image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1574175711372-fb3006bb39a0image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'Jose.mizrahi', 'total_collections': 1, 'total_likes': 141, 'total_photos': 29, 'accepted_tos': True}, 'exif': {'make': 'Apple', 'model': 'iPhone 7 Plus', 'exposure_time': '1/5319', 'aperture': '1.8', 'focal_length': '4.0', 'iso': 20}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 9054, 'downloads': 49}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Shut the fuck up I will fucking laser you with alien fucking eyes and explode your fucking head', 'image': 'https://images.unsplash.com/photo-1574297817682-3c55b6ec1e9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/Ycn5kwY.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.912835121154785
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:04:19.933433)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Tweeting is legal and also therapeutic
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': '2VIqjfp3NfA', 'created_at': '2019-07-24T17:42:41-04:00', 'updated_at': '2020-01-21T00:02:43-05:00', 'promoted_at': None, 'width': 4032, 'height': 3024, 'color': '#1D2726', 'description': 'Rewa, Poland', 'alt_description': 'pathway at the body of water during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1564004393607-6412d25f2bb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1564004393607-6412d25f2bb0?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1564004393607-6412d25f2bb0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1564004393607-6412d25f2bb0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1564004393607-6412d25f2bb0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/2VIqjfp3NfA', 'html': 'https://unsplash.com/photos/2VIqjfp3NfA', 'download': 'https://unsplash.com/photos/2VIqjfp3NfA/download', 'download_location': 'https://api.unsplash.com/photos/2VIqjfp3NfA/download'}, 'categories': [], 'likes': 4, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'ozMZesUy_Gs', 'updated_at': '2020-02-16T16:52:27-05:00', 'username': 'agnieszkam', 'name': 'Agnieszka M', 'first_name': 'Agnieszka', 'last_name': 'M', 'twitter_username': None, 'portfolio_url': None, 'bio': None, 'location': 'Leeds, United Kingdom', 'links': {'self': 'https://api.unsplash.com/users/agnieszkam', 'html': 'https://unsplash.com/@agnieszkam', 'photos': 'https://api.unsplash.com/users/agnieszkam/photos', 'likes': 'https://api.unsplash.com/users/agnieszkam/likes', 'portfolio': 'https://api.unsplash.com/users/agnieszkam/portfolio', 'following': 'https://api.unsplash.com/users/agnieszkam/following', 'followers': 'https://api.unsplash.com/users/agnieszkam/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1578240217746-524114c29631image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1578240217746-524114c29631image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1578240217746-524114c29631image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': None, 'total_collections': 1, 'total_likes': 26, 'total_photos': 202, 'accepted_tos': True}, 'exif': {'make': 'Apple', 'model': 'iPhone XS', 'exposure_time': '1/4098', 'aperture': '1.8', 'focal_length': '4.2', 'iso': 25}, 'location': {'title': 'Poland', 'name': 'Poland', 'city': None, 'country': 'Poland', 'position': {'latitude': 54.63903056, 'longitude': 18.51552778}}, 'views': 41494, 'downloads': 412}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Tweeting is legal and also therapeutic', 'image': 'https://images.unsplash.com/photo-1564004393607-6412d25f2bb0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/kAoAJC8.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.4710729122161865
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:04:33.956361)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: Just stop lying about shit. Just stop lying.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'ZyPN2a6DoQE', 'created_at': '2018-11-12T19:02:50-05:00', 'updated_at': '2019-12-07T00:02:50-05:00', 'promoted_at': None, 'width': 4608, 'height': 3456, 'color': '#16181E', 'description': None, 'alt_description': 'white buildings during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1542067352-17ad6f43c1c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1542067352-17ad6f43c1c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1542067352-17ad6f43c1c1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1542067352-17ad6f43c1c1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1542067352-17ad6f43c1c1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/ZyPN2a6DoQE', 'html': 'https://unsplash.com/photos/ZyPN2a6DoQE', 'download': 'https://unsplash.com/photos/ZyPN2a6DoQE/download', 'download_location': 'https://api.unsplash.com/photos/ZyPN2a6DoQE/download'}, 'categories': [], 'likes': 25, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'uC9XMMWu0nk', 'updated_at': '2020-02-08T12:41:16-05:00', 'username': 'alex_tsl', 'name': 'Alexandra', 'first_name': 'Alexandra', 'last_name': None, 'twitter_username': None, 'portfolio_url': None, 'bio': 'there is beauty in everything', 'location': None, 'links': {'self': 'https://api.unsplash.com/users/alex_tsl', 'html': 'https://unsplash.com/@alex_tsl', 'photos': 'https://api.unsplash.com/users/alex_tsl/photos', 'likes': 'https://api.unsplash.com/users/alex_tsl/likes', 'portfolio': 'https://api.unsplash.com/users/alex_tsl/portfolio', 'following': 'https://api.unsplash.com/users/alex_tsl/following', 'followers': 'https://api.unsplash.com/users/alex_tsl/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1559162575775-ad1011106aa5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1559162575775-ad1011106aa5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1559162575775-ad1011106aa5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'alexandra_tsl', 'total_collections': 2, 'total_likes': 21, 'total_photos': 56, 'accepted_tos': True}, 'exif': {'make': 'RICOH IMAGING COMPANY, LTD.', 'model': 'PENTAX XG-1', 'exposure_time': '1/450', 'aperture': '4.0', 'focal_length': '11.1', 'iso': 100}, 'location': {'title': 'athens, greece', 'name': 'athens, greece', 'city': 'athens', 'country': 'greece', 'position': {'latitude': None, 'longitude': None}}, 'views': 162668, 'downloads': 1307}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'Just stop lying about shit. Just stop lying.', 'image': 'https://images.unsplash.com/photo-1542067352-17ad6f43c1c1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/WeIrDEO.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.6124353408813477
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:08:50.424784)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: 2024
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'n37oYVDDN0A', 'created_at': '2019-08-10T11:16:49-04:00', 'updated_at': '2020-02-07T00:03:20-05:00', 'promoted_at': None, 'width': 4095, 'height': 2734, 'color': '#FBFAF2', 'description': 'Taken 102 meters below the ground in the famous Grotte da Trabuc in France', 'alt_description': 'brown rock', 'urls': {'raw': 'https://images.unsplash.com/photo-1565450188080-62cc8fb05867?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1565450188080-62cc8fb05867?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1565450188080-62cc8fb05867?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1565450188080-62cc8fb05867?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1565450188080-62cc8fb05867?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/n37oYVDDN0A', 'html': 'https://unsplash.com/photos/n37oYVDDN0A', 'download': 'https://unsplash.com/photos/n37oYVDDN0A/download', 'download_location': 'https://api.unsplash.com/photos/n37oYVDDN0A/download'}, 'categories': [], 'likes': 13, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'DeJ5HWVyajw', 'updated_at': '2020-02-24T09:18:17-05:00', 'username': 'leowieling', 'name': 'Leo Wieling', 'first_name': 'Leo', 'last_name': 'Wieling', 'twitter_username': 'leowieling', 'portfolio_url': 'https://leowieling.wixsite.com/fotograaf', 'bio': 'Dutch | Proud father of 2 boys | Music, Movie, Photography, Tech lover | \uf8ff | Enjoying life | Drummer | All photos by me | Sony Alpha 6500 | iPhone | DJI Mavic Pro drone', 'location': 'Apeldoorn, the Netherlands', 'links': {'self': 'https://api.unsplash.com/users/leowieling', 'html': 'https://unsplash.com/@leowieling', 'photos': 'https://api.unsplash.com/users/leowieling/photos', 'likes': 'https://api.unsplash.com/users/leowieling/likes', 'portfolio': 'https://api.unsplash.com/users/leowieling/portfolio', 'following': 'https://api.unsplash.com/users/leowieling/following', 'followers': 'https://api.unsplash.com/users/leowieling/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1554814210784-e2e608487dbf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1554814210784-e2e608487dbf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1554814210784-e2e608487dbf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'leowieling', 'total_collections': 0, 'total_likes': 59, 'total_photos': 146, 'accepted_tos': True}, 'exif': {'make': 'SONY', 'model': 'ILCE-6500', 'exposure_time': '0.3', 'aperture': '11.0', 'focal_length': '30.0', 'iso': 6400}, 'location': {'title': '1105 Chemin de Recoulin, 30140 Anduze, France, Anduze', 'name': '1105 Chemin de Recoulin, 30140 Anduze, France, Anduze', 'city': 'Anduze', 'country': 'France', 'position': {'latitude': 44.06945833, 'longitude': 3.97338056}}, 'views': 10802, 'downloads': 210}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': '2024', 'image': 'https://images.unsplash.com/photo-1565450188080-62cc8fb05867?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/IAj9Q4R.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.8294148445129395
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:08:58.678702)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I want the world to be better! All I want is positive! All I want is dopeness!
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'U_4q56gaEOw', 'created_at': '2020-01-21T06:22:23-05:00', 'updated_at': '2020-01-22T14:01:53-05:00', 'promoted_at': None, 'width': 5472, 'height': 3648, 'color': '#D4958A', 'description': 'Winter lights', 'alt_description': 'brown and white mountains near body of water under blue sky during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1579605502567-94a7c731d8f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1579605502567-94a7c731d8f0?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1579605502567-94a7c731d8f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1579605502567-94a7c731d8f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1579605502567-94a7c731d8f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/U_4q56gaEOw', 'html': 'https://unsplash.com/photos/U_4q56gaEOw', 'download': 'https://unsplash.com/photos/U_4q56gaEOw/download', 'download_location': 'https://api.unsplash.com/photos/U_4q56gaEOw/download'}, 'categories': [], 'likes': 0, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'xNNn-CbSskc', 'updated_at': '2020-01-26T23:01:04-05:00', 'username': 'juliestamenic', 'name': 'Julie Stamenic', 'first_name': 'Julie', 'last_name': 'Stamenic', 'twitter_username': None, 'portfolio_url': 'https://www.juliestamenic.com/', 'bio': 'Born in Belgium, I always enjoyed catching moments and nice lights.\r\nI got my first camera before my Erasmus in Norway, from there it never stopped. I am currently living in Barcelona. \r\nWelcome to my world! ', 'location': 'Barcelona', 'links': {'self': 'https://api.unsplash.com/users/juliestamenic', 'html': 'https://unsplash.com/@juliestamenic', 'photos': 'https://api.unsplash.com/users/juliestamenic/photos', 'likes': 'https://api.unsplash.com/users/juliestamenic/likes', 'portfolio': 'https://api.unsplash.com/users/juliestamenic/portfolio', 'following': 'https://api.unsplash.com/users/juliestamenic/following', 'followers': 'https://api.unsplash.com/users/juliestamenic/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1579170638263-5a8477847b3fimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1579170638263-5a8477847b3fimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1579170638263-5a8477847b3fimage?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'juliestamenic', 'total_collections': 0, 'total_likes': 0, 'total_photos': 10, 'accepted_tos': True}, 'exif': {'make': 'Canon', 'model': 'Canon EOS 6D', 'exposure_time': '1/60', 'aperture': '5.6', 'focal_length': '17.0', 'iso': 100}, 'location': {'title': 'Lofoten, Norvège', 'name': 'Lofoten, Norvège', 'city': None, 'country': 'Norvège', 'position': {'latitude': 67.9931452, 'longitude': 13.6397069}}, 'views': 719, 'downloads': 24}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'I want the world to be better! All I want is positive! All I want is dopeness!', 'image': 'https://images.unsplash.com/photo-1579605502567-94a7c731d8f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/3FLEhdf.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.1011650562286377
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:14:20.291299)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I still think I am the greatest.
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'MgJffy8urto', 'created_at': '2019-09-07T13:23:15-04:00', 'updated_at': '2019-10-02T14:44:28-04:00', 'promoted_at': None, 'width': 4565, 'height': 3424, 'color': '#B8C1CE', 'description': None, 'alt_description': 'white snow', 'urls': {'raw': 'https://images.unsplash.com/photo-1567876930061-6d1455ad71da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1567876930061-6d1455ad71da?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1567876930061-6d1455ad71da?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1567876930061-6d1455ad71da?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1567876930061-6d1455ad71da?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/MgJffy8urto', 'html': 'https://unsplash.com/photos/MgJffy8urto', 'download': 'https://unsplash.com/photos/MgJffy8urto/download', 'download_location': 'https://api.unsplash.com/photos/MgJffy8urto/download'}, 'categories': [], 'likes': 3, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'BoouI4xtQew', 'updated_at': '2020-01-27T14:07:30-05:00', 'username': 'uripdunker', 'name': 'Urip Dunker', 'first_name': 'Urip', 'last_name': 'Dunker', 'twitter_username': None, 'portfolio_url': 'http://www.uripdunker.com', 'bio': 'German freelance photographer based in Berlin. Available for work worldwide. Prints on my website. For inquiries: uripdunker@gmx.net - Instagram @renounce_the_cubicle', 'location': 'Berlin', 'links': {'self': 'https://api.unsplash.com/users/uripdunker', 'html': 'https://unsplash.com/@uripdunker', 'photos': 'https://api.unsplash.com/users/uripdunker/photos', 'likes': 'https://api.unsplash.com/users/uripdunker/likes', 'portfolio': 'https://api.unsplash.com/users/uripdunker/portfolio', 'following': 'https://api.unsplash.com/users/uripdunker/following', 'followers': 'https://api.unsplash.com/users/uripdunker/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1563896888025-281e4b7aed2a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1563896888025-281e4b7aed2a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1563896888025-281e4b7aed2a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'renounce_the_cubicle', 'total_collections': 1, 'total_likes': 5, 'total_photos': 105, 'accepted_tos': True}, 'exif': {'make': 'OLYMPUS IMAGING CORP.', 'model': 'E-M5MarkII', 'exposure_time': '1/320', 'aperture': '4.0', 'focal_length': '14.0', 'iso': 100}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 5523, 'downloads': 71}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'I still think I am the greatest.', 'image': 'https://images.unsplash.com/photo-1567876930061-6d1455ad71da?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/eMqs17f.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.885225772857666
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:14:29.365548)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: All you have to be is yourself
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'WmD8EfNeyXE', 'created_at': '2019-07-14T15:24:22-04:00', 'updated_at': '2020-02-21T00:04:54-05:00', 'promoted_at': None, 'width': 6000, 'height': 4000, 'color': '#E8F1EF', 'description': 'Stream on the Big Island of Hawaii', 'alt_description': 'stone and water during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1563132178-7e280b42c4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1563132178-7e280b42c4ff?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1563132178-7e280b42c4ff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1563132178-7e280b42c4ff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1563132178-7e280b42c4ff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/WmD8EfNeyXE', 'html': 'https://unsplash.com/photos/WmD8EfNeyXE', 'download': 'https://unsplash.com/photos/WmD8EfNeyXE/download', 'download_location': 'https://api.unsplash.com/photos/WmD8EfNeyXE/download'}, 'categories': [], 'likes': 25, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'FPq8Z5piWqc', 'updated_at': '2020-02-13T18:30:39-05:00', 'username': 'bigspringsstudio', 'name': 'Lauren George', 'first_name': 'Lauren', 'last_name': 'George', 'twitter_username': None, 'portfolio_url': 'https://www.bigspringsstudio.com', 'bio': None, 'location': 'Hilo, Hawaii', 'links': {'self': 'https://api.unsplash.com/users/bigspringsstudio', 'html': 'https://unsplash.com/@bigspringsstudio', 'photos': 'https://api.unsplash.com/users/bigspringsstudio/photos', 'likes': 'https://api.unsplash.com/users/bigspringsstudio/likes', 'portfolio': 'https://api.unsplash.com/users/bigspringsstudio/portfolio', 'following': 'https://api.unsplash.com/users/bigspringsstudio/following', 'followers': 'https://api.unsplash.com/users/bigspringsstudio/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1544467728573-40bdcad6f344?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1544467728573-40bdcad6f344?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1544467728573-40bdcad6f344?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'bigspringsstudio', 'total_collections': 25, 'total_likes': 20, 'total_photos': 15, 'accepted_tos': True}, 'exif': {'make': 'NIKON CORPORATION', 'model': 'NIKON D3400', 'exposure_time': '1/125', 'aperture': '7.1', 'focal_length': '70.0', 'iso': 450}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 34180, 'downloads': 230}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': 'All you have to be is yourself', 'image': 'https://images.unsplash.com/photo-1563132178-7e280b42c4ff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/dIWpxD8.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 2.751437187194824
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:23:34.811387)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: I'm the best
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'mpMYWUAkjTE', 'created_at': '2020-02-13T16:50:02-05:00', 'updated_at': '2020-02-14T14:01:06-05:00', 'promoted_at': None, 'width': 4032, 'height': 3024, 'color': '#2C2E2C', 'description': None, 'alt_description': 'aerial view of city near body of water during daytime', 'urls': {'raw': 'https://images.unsplash.com/photo-1581630504150-9793ef32b8ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1581630504150-9793ef32b8ba?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1581630504150-9793ef32b8ba?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1581630504150-9793ef32b8ba?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1581630504150-9793ef32b8ba?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/mpMYWUAkjTE', 'html': 'https://unsplash.com/photos/mpMYWUAkjTE', 'download': 'https://unsplash.com/photos/mpMYWUAkjTE/download', 'download_location': 'https://api.unsplash.com/photos/mpMYWUAkjTE/download'}, 'categories': [], 'likes': 0, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'M91MYGL-EDI', 'updated_at': '2020-02-20T03:40:42-05:00', 'username': 'dalma95', 'name': 'Dalma Dioszegi', 'first_name': 'Dalma', 'last_name': 'Dioszegi', 'twitter_username': None, 'portfolio_url': None, 'bio': None, 'location': None, 'links': {'self': 'https://api.unsplash.com/users/dalma95', 'html': 'https://unsplash.com/@dalma95', 'photos': 'https://api.unsplash.com/users/dalma95/photos', 'likes': 'https://api.unsplash.com/users/dalma95/likes', 'portfolio': 'https://api.unsplash.com/users/dalma95/portfolio', 'following': 'https://api.unsplash.com/users/dalma95/following', 'followers': 'https://api.unsplash.com/users/dalma95/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1581630640473-54610d481d90image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1581630640473-54610d481d90image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1581630640473-54610d481d90image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': None, 'total_collections': 0, 'total_likes': 0, 'total_photos': 10, 'accepted_tos': True}, 'exif': {'make': None, 'model': None, 'exposure_time': None, 'aperture': None, 'focal_length': None, 'iso': None}, 'location': {'title': 'Niagara Falls, ON, Canada', 'name': 'Niagara Falls, ON, Canada', 'city': 'Niagara Falls', 'country': 'Canada', 'position': {'latitude': 43.0895577, 'longitude': -79.0849436}}, 'views': 1073, 'downloads': 8}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "I'm the best", 'image': 'https://images.unsplash.com/photo-1581630504150-9793ef32b8ba?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/XiIDWrd.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 4.20630955696106
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:23:58.339529)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: People always tell you 'Be humble. Be humble.' When was the last time someone told you to be amazing? Be great! Be awesome! Be awesome!
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'yp2puCjSdYc', 'created_at': '2020-01-24T05:02:28-05:00', 'updated_at': '2020-01-24T05:45:48-05:00', 'promoted_at': None, 'width': 3000, 'height': 4000, 'color': '#0C1012', 'description': 'Frozen day', 'alt_description': None, 'urls': {'raw': 'https://images.unsplash.com/photo-1579860105902-1aac33c01443?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1579860105902-1aac33c01443?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1579860105902-1aac33c01443?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1579860105902-1aac33c01443?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1579860105902-1aac33c01443?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/yp2puCjSdYc', 'html': 'https://unsplash.com/photos/yp2puCjSdYc', 'download': 'https://unsplash.com/photos/yp2puCjSdYc/download', 'download_location': 'https://api.unsplash.com/photos/yp2puCjSdYc/download'}, 'categories': [], 'likes': 6, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'B6lmU6ySPYU', 'updated_at': '2020-02-12T08:52:07-05:00', 'username': 'nathan030997', 'name': 'Nathan Queloz', 'first_name': 'Nathan', 'last_name': 'Queloz', 'twitter_username': None, 'portfolio_url': None, 'bio': 'Swiss resident \r\ncomputer specialist (network specialist)\r\nPassionate about drones and aerial photography. Driver mavic 2 Zoom', 'location': 'Switzerland', 'links': {'self': 'https://api.unsplash.com/users/nathan030997', 'html': 'https://unsplash.com/@nathan030997', 'photos': 'https://api.unsplash.com/users/nathan030997/photos', 'likes': 'https://api.unsplash.com/users/nathan030997/likes', 'portfolio': 'https://api.unsplash.com/users/nathan030997/portfolio', 'following': 'https://api.unsplash.com/users/nathan030997/following', 'followers': 'https://api.unsplash.com/users/nathan030997/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1526203698796-c94ffa5626fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1526203698796-c94ffa5626fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1526203698796-c94ffa5626fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': 'nathan030997', 'total_collections': 0, 'total_likes': 563, 'total_photos': 108, 'accepted_tos': True}, 'exif': {'make': 'DJI', 'model': 'FC2204', 'exposure_time': '1/640', 'aperture': '2.8', 'focal_length': '4.4', 'iso': 100}, 'location': {'title': 'Jura, Suisse', 'name': 'Jura, Suisse', 'city': None, 'country': 'Suisse', 'position': {'latitude': 47.3444474, 'longitude': 7.1430608}}, 'views': 8894, 'downloads': 24}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "People always tell you 'Be humble. Be humble.' When was the last time someone told you to be amazing? Be great! Be awesome! Be awesome!", 'image': 'https://images.unsplash.com/photo-1579860105902-1aac33c01443?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/0EoXecN.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 4.226180553436279
+
+____________________________________________
+
+Local Timestamp: 25-Feb-2020 (16:24:11.480589)
+Request Method: <[GET]>
+Request URL: https://127.0.0.1:7777/generateMeme
+Request Body: ImmutableMultiDict([])
+Request Headers: Host: 127.0.0.1:7777User-Agent: python-requests/2.22.0Accept-Encoding: gzip, deflateAccept: */*Connection: keep-alive
+API Calls:
+	Request Method: <[GET]>
+	Request URL: http://api.kanye.rest/?format=text
+	Request Body: ''
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: One of my favorite of many things about what the Trump hat represents to me is that people can't tell me what to do because I'm black
+
+	Request Method: <[GET]>
+	Request URL: https://api.unsplash.com/photos/random/
+	Request Body: ''
+	Request Headers: {'client_id': 'E1AN1AhOXppkUJ68zpsFDRGpvhkoFTGtbQPCeo3JUL0', 'query': 'Nature'}
+	Response Headers: ''
+	Response Body Text: {'id': 'MdVB2IJJ2js', 'created_at': '2019-09-09T14:39:23-04:00', 'updated_at': '2019-12-14T00:07:15-05:00', 'promoted_at': None, 'width': 4800, 'height': 3200, 'color': '#E3E3DF', 'description': 'Moon', 'alt_description': None, 'urls': {'raw': 'https://images.unsplash.com/photo-1568054295870-2c9c0bc43a35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjY0N30', 'full': 'https://images.unsplash.com/photo-1568054295870-2c9c0bc43a35?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjExNjY0N30', 'regular': 'https://images.unsplash.com/photo-1568054295870-2c9c0bc43a35?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'small': 'https://images.unsplash.com/photo-1568054295870-2c9c0bc43a35?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30', 'thumb': 'https://images.unsplash.com/photo-1568054295870-2c9c0bc43a35?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}, 'links': {'self': 'https://api.unsplash.com/photos/MdVB2IJJ2js', 'html': 'https://unsplash.com/photos/MdVB2IJJ2js', 'download': 'https://unsplash.com/photos/MdVB2IJJ2js/download', 'download_location': 'https://api.unsplash.com/photos/MdVB2IJJ2js/download'}, 'categories': [], 'likes': 1, 'liked_by_user': False, 'current_user_collections': [], 'user': {'id': 'DLJwoH4L2GQ', 'updated_at': '2020-02-24T00:18:06-05:00', 'username': 'lacarta', 'name': 'Santiago Lacarta', 'first_name': 'Santiago', 'last_name': 'Lacarta', 'twitter_username': None, 'portfolio_url': None, 'bio': None, 'location': None, 'links': {'self': 'https://api.unsplash.com/users/lacarta', 'html': 'https://unsplash.com/@lacarta', 'photos': 'https://api.unsplash.com/users/lacarta/photos', 'likes': 'https://api.unsplash.com/users/lacarta/likes', 'portfolio': 'https://api.unsplash.com/users/lacarta/portfolio', 'following': 'https://api.unsplash.com/users/lacarta/following', 'followers': 'https://api.unsplash.com/users/lacarta/followers'}, 'profile_image': {'small': 'https://images.unsplash.com/profile-1571417625221-8a260a3f3cf5image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32', 'medium': 'https://images.unsplash.com/profile-1571417625221-8a260a3f3cf5image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64', 'large': 'https://images.unsplash.com/profile-1571417625221-8a260a3f3cf5image?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128'}, 'instagram_username': None, 'total_collections': 0, 'total_likes': 0, 'total_photos': 72, 'accepted_tos': True}, 'exif': {'make': 'NIKON CORPORATION', 'model': 'NIKON D7200', 'exposure_time': '1/800', 'aperture': '11', 'focal_length': '800.0', 'iso': 2500}, 'location': {'title': None, 'name': None, 'city': None, 'country': None, 'position': {'latitude': None, 'longitude': None}}, 'views': 419640, 'downloads': 2140}
+
+	Request Method: <[GET]>
+	Request URL: http://127.0.0.1:5000/getImage
+	Request Body: {'text': "One of my favorite of many things about what the Trump hat represents to me is that people can't tell me what to do because I'm black", 'image': 'https://images.unsplash.com/photo-1568054295870-2c9c0bc43a35?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNjY0N30'}
+	Request Headers: ''
+	Response Headers: ''
+	Response Body Text: https://i.imgur.com/YKgxGVj.jpg
+
+Response Headers: Content-Type: application/jsonContent-Length: 42Access-Control-Allow-Origin: *
+Response Body: <Response 42 bytes [200 OK]>
+Response Time: 3.2743325233459473
+
+____________________________________________
+

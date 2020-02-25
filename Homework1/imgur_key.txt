@@ -1,0 +1,2 @@
+Client id: 29fedc3beca2ffc
+Client secret: 33319b47ac40ca2b0b6a8d8b31ce3750d3fe5c60
