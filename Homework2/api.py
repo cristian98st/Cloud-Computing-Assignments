@@ -146,12 +146,50 @@ class RequestHandler(BaseHTTPRequestHandler):
         else:
             try:
                 response = dict()
+                if self.path == "/image/modify/" or self.path == "/image/modify":
+                    length = int(self.headers['Content-Length'])
+                    body = json.loads(self.rfile.read(length))
+                    img_id = int(body['img_id'])
+                    new_text = body['text']
+                    new_author = body['author']
+                    new_img = body['img_url']
+
+                    query = {'img_id': img_id}
+                    result = proxy_collection.find(query)
+                    if int(result[0]['user_id']) != int(self.user_id):
+                        self.send_code(403)
+                    else:
+                        query = {'_id': img_id}
+                        new_img_url = generateImage(new_img, new_text, new_author)
+                        new_values = {'$set': {'text': new_text, 'author': new_author, 'img_url': new_img_url, 'original_img': new_img}}
+                        images.update_one(query, new_values)
+
+                        self._set_headers()
+                else:
+                    self.send_code(404)
+
+            except Exception as e:
+                print(e.__class__)
+                if e.__class__ == IndexError:
+                    self.send_code(404)
+                elif e.__class__ == KeyError:
+                    self.send_code(400)
+                else:
+                    self.send_code(500)
+
+
+    def do_PATCH(self):
+        if not self._valid_auth():
+            self.send_code(401)
+        else:
+            try:
+                response = dict()
                 if self.path == "/image/modify/text" or self.path == "/image/modify/text/":
                     length = int(self.headers['Content-Length'])
                     body = json.loads(self.rfile.read(length))
                     img_id = int(body['img_id'])
                     new_text = body['text']
-                    new_author = "-" + body['author']
+                    new_author = body['author']
 
                     query = {'img_id': img_id}
                     result = proxy_collection.find(query)
@@ -163,9 +201,66 @@ class RequestHandler(BaseHTTPRequestHandler):
                         new_img_url = generateImage(original_img, new_text, new_author)
                         new_values = {'$set': {'text': new_text, 'author': new_author, 'img_url': new_img_url}}
                         images.update_one(query, new_values)
-                        response['img_url'] = new_img_url
 
                         self._set_headers()
+
+                elif self.path == "/image/modify/image" or self.path == "/image/modify/image/":
+                    length = int(self.headers['Content-Length'])
+                    body = json.loads(self.rfile.read(length))
+                    img_id = int(body['img_id'])
+                    new_image = body['image_url']
+
+                    query = {'img_id': img_id}
+                    result = proxy_collection.find(query)
+                    if int(result[0]['user_id']) != int(self.user_id):
+                        self.send_code(403)
+                    else:
+                        query = {'_id': img_id}
+                        result = images.find(query)[0]
+                        text = result['text']
+                        author = result['author']
+                        new_img_url = generateImage(new_image, text, author)
+                        new_values = {'$set': {'original_img': new_image, 'img_url': new_img_url}}
+                        images.update_one(query, new_values)
+
+                        self._set_headers()
+                else:
+                    self.send_code(404)
+
+            except Exception as e:
+                print(e.__class__)
+                if e.__class__ == IndexError:
+                    self.send_code(404)
+                elif e.__class__ == KeyError:
+                    self.send_code(400)
+                else:
+                    self.send_code(500)
+
+    def do_DELETE(self):
+        if not self._valid_auth():
+            self.send_code(401)
+        else:
+            try:
+                response = dict()
+                if self.path == "/delete/user" or self.path == "/delete/user/":
+                    length = int(self.headers['Content-Length'])
+                    body = json.loads(self.rfile.read(length))
+                    username = body['username']
+
+                    query = {'user_id': self.user_id}
+                    result = users.find({"_id": self.user_id})[0]
+                    if result['username'] != username:
+                        self.send_code(403)
+                    else:
+                        users.delete_one({'_id': self.user_id})
+                        result = proxy_collection.find(query)
+                        for r in result:
+                            query2 = {'_id': r['img_id']}
+                            images.delete_one(query2)
+                        proxy_collection.delete_many(query)
+
+                        self._set_headers()
+
                 else:
                     self.send_code(404)
 
