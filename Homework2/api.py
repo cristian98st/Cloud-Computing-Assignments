@@ -8,6 +8,7 @@ my_client = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = my_client["mydatabase"]
 users = mydb['users']
 images = mydb['images']
+proxy_collection = mydb['users_images']
 
 
 class RequestHandler(BaseHTTPRequestHandler):
@@ -23,7 +24,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         query = {'api_key': auth_key}
         result = users.find(query)
         try:
-            self.user_id = result[0]['_id']
+            self. user_id = result[0]['_id']
             return True
         except:
             return False
@@ -34,58 +35,59 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_error(status_code, message)
 
     def do_GET(self):
-        if not self._valid_auth():
-            self.send_code(401)
-        else:
-            try:
-                response = dict()
+        try:
+            response = dict()
 
-                if self.path == '/user' or self.path == "/user/":
-                    length = int(self.headers["Content-Length"])
-                    body = json.loads(self.rfile.read(length))
-                    query = {'username': body['username']}
-                    result = users.find(query)
-                    response['id'] = result[0]['_id']
-                    response['username'] = body['username']
+            if self.path == '/user' or self.path == "/user/":
+                length = int(self.headers["Content-Length"])
+                body = json.loads(self.rfile.read(length))
+                query = {'username': body['username']}
+                result = users.find(query)
+                response['id'] = result[0]['_id']
+                response['username'] = body['username']
 
-                elif self.path == '/users/' or self.path == '/users':
-                    result = users.find()
-                    users_list = list()
-                    for user in result:
-                        users_list.append(
-                            {'ID': user['_id'], 'username': user['username']})
-                    response['users'] = users_list
+            elif self.path == '/users/' or self.path == '/users':
+                result = users.find()
+                users_list = list()
+                for user in result:
+                    users_list.append(
+                        {'ID': user['_id'], 'username': user['username']})
+                response['users'] = users_list
 
-                elif self.path == '/user/images' or self.path == '/user/images/':
-                    length = int(self.headers['Content-Length'])
-                    body = json.loads(self.rfile.read(length))
+            elif self.path == '/user/images' or self.path == '/user/images/':
+                length = int(self.headers['Content-Length'])
+                body = json.loads(self.rfile.read(length))
 
-                    query = {'username': body['username']}
-                    result = users.find(query)
-                    response['id'] = result[0]['_id']
-                    response['username'] = result[0]['username']
+                query = {'username': body['username']}
+                result = users.find(query)
+                response['id'] = result[0]['_id']
+                response['username'] = result[0]['username']
 
-                    images_list = list()
-                    query = {'user_id': result[0]['_id']}
-                    result = images.find(query)
-                    for r in result:
-                        images_list.append({'img_link': r['img_url']})
-                    response['images'] = images_list
 
-                else:
-                    self.send_code(404)
+                images_list = list()
+                query = {'user_id': result[0]['_id']}
+                result = proxy_collection.find(query)
+                for r in result:
+                    img_id = r['img_id']
+                    query = {'_id': img_id}
+                    result2 = images.find(query)
+                    images_list.append({'img_id': img_id, 'img_link': result2[0]['img_url']})
+                response['images'] = images_list
 
                 self._set_headers()
                 self.wfile.write(json.dumps(response).encode())
+            else:
+                self.send_code(404)
 
-            except Exception as e:
-                print(e.__class__)
-                if e.__class__ == IndexError:
-                    self.send_code(404)
-                elif e.__class__ == KeyError:
-                    self.send_code(400)
-                else:
-                    self.send_code(500)
+
+        except Exception as e:
+            print(e.__class__)
+            if e.__class__ == IndexError:
+                self.send_code(404)
+            elif e.__class__ == KeyError:
+                self.send_code(400)
+            else:
+                self.send_code(500)
 
     def do_POST(self):
         response = dict()
@@ -110,16 +112,25 @@ class RequestHandler(BaseHTTPRequestHandler):
             elif not self._valid_auth():
                 self.send_code(401)
             else:  
-                if self.path == '/upload_image' or self.path == '/upload_image/':
+                if self.path == '/image/upload' or self.path == '/image/upload/':
                     length = int(self.headers['Content-Length'])
                     body = json.loads(self.rfile.read(length))
                     img_url = generateImage(body['img_url'], body['text'], body['author'])
-                    print(img_url)
-                    images.insert_one({"user_id": self.user_id, "img_url": img_url})
-                    response['image_url'] = img_url
 
-            self._set_headers()
-            self.wfile.write(json.dumps(response).encode())
+                    image_id = 1
+                    if images.count_documents({}) > 0:
+                        image_id = int(images.find().sort([('_id', -1)]).limit(1)[0]['_id']) + 1
+                    images.insert_one({"_id": image_id, "img_url": img_url, "original_img": body['img_url'], "text": body['text'], "author": body['author']})
+
+                    
+                    proxy_collection.insert_one({"user_id": self.user_id, "img_id": image_id})
+                    response['image_id'] = image_id
+                    response['image_url'] = img_url
+                    self._set_headers()
+                    self.wfile.write(json.dumps(response).encode())
+                else:
+                    self.send_code(404)
+
         except Exception as e:
             print(e.__class__)
             if e.__class__ == IndexError:
@@ -128,6 +139,44 @@ class RequestHandler(BaseHTTPRequestHandler):
                 self.send_code(400)
             else:
                 self.send_code(500)
+
+    def do_PUT(self):
+        if not self._valid_auth():
+            self.send_code(401)
+        else:
+            try:
+                response = dict()
+                if self.path == "/image/modify/text" or self.path == "/image/modify/text/":
+                    length = int(self.headers['Content-Length'])
+                    body = json.loads(self.rfile.read(length))
+                    img_id = int(body['img_id'])
+                    new_text = body['text']
+                    new_author = "-" + body['author']
+
+                    query = {'img_id': img_id}
+                    result = proxy_collection.find(query)
+                    if int(result[0]['user_id']) != int(self.user_id):
+                        self.send_code(403)
+                    else:
+                        query = {'_id': img_id}
+                        original_img = images.find(query)[0]['original_img']
+                        new_img_url = generateImage(original_img, new_text, new_author)
+                        new_values = {'$set': {'text': new_text, 'author': new_author, 'img_url': new_img_url}}
+                        images.update_one(query, new_values)
+                        response['img_url'] = new_img_url
+
+                        self._set_headers()
+                else:
+                    self.send_code(404)
+
+            except Exception as e:
+                print(e.__class__)
+                if e.__class__ == IndexError:
+                    self.send_code(404)
+                elif e.__class__ == KeyError:
+                    self.send_code(400)
+                else:
+                    self.send_code(500)
 
 
 def run(server_class=HTTPServer, handler_class=RequestHandler, addr="127.0.0.1", port=8080):

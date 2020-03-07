@@ -7,6 +7,7 @@ mydb = my_client["mydatabase"]
 
 users_collection = mydb['users']
 photos_collection = mydb['images']
+users_photos_proxy = mydb['users_images']
 
 names = open('usernames.txt').read().split("\n")
 id = 1
