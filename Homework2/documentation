@@ -1,0 +1,88 @@
+Users:
+
+    GET:
+        /user (no authorization required)
+            -parameters:
+                -> username
+            -response 200 (json-body):
+                -> id
+                -> username
+        
+        /users (no authorization required)
+            -parameters:
+                none
+            -response 200 (json-body):
+                -list:
+                    -> id
+                    -> username
+
+        /user/images (no authorization required)
+            -parameters:
+                -> username
+            -response 200 (json-body):
+                -> id
+                -> username
+                - list:
+                    -> img_id
+                    -> img_link
+
+    POST:
+        /register (no authorization required)
+            -parameters:
+                -> username
+            -response 200 (json-body):
+                -> id
+                -> username
+                -> api_key
+
+        /image/upload (authorization required*)
+            -parameters:
+                -> img_url
+                -> text
+                -> author
+            -response 200 (json-body):
+                -> image_id
+                -> image_url
+
+    PUT:
+        /image/modify 
+            -parameters:
+                -> img_id
+                -> text
+                -> author
+                -> img_url
+
+            -response 200 (json-body):
+                none
+        
+    PATCH:
+        /image/modify/text (authorization required*)
+            -parameters:
+                -> img_id
+                -> text
+                -> author
+            -response 200:
+                none
+
+        /image/modify/image (authorization required*)
+            -parameters:
+                -> img_id
+                -> image_url
+            -response 200 (json-body):
+                none
+
+    DELETE:
+        /delete/user (authorization required*)
+            -parameters:
+                -> username
+            -response 200 (json-body):
+                none
+
+        /delete/image (authorization required*)
+            -parameters:
+                -> img_id
+            -response 200 (json-body):
+                none
+
+* - authorization with api_key in header
+

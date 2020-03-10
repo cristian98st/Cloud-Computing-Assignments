@@ -13,6 +13,7 @@ proxy_collection = mydb['users_images']
 
 class RequestHandler(BaseHTTPRequestHandler):
     user_id = -1
+    paths_list = ['/user', '/user/', '/users', '/users/', 'user/images', '/user/images/', '/register', '/register/', '/image/upload', '/image/upload/', 'image/modify', 'image/modify/', '/image/modify/text', '/image/modify/text/', '/image/modify/image', '/image/modify/image/', '/delete/image', '/delete/image/', '/delete/user', '/delete/user/']
 
     def _set_headers(self):
         self.send_response(200)
@@ -45,6 +46,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                 result = users.find(query)
                 response['id'] = result[0]['_id']
                 response['username'] = body['username']
+                self._set_headers()
+                self.wfile.write(json.dumps(response).encode())
 
             elif self.path == '/users/' or self.path == '/users':
                 result = users.find()
@@ -53,6 +56,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                     users_list.append(
                         {'ID': user['_id'], 'username': user['username']})
                 response['users'] = users_list
+                self._set_headers()
+                self.wfile.write(json.dumps(response).encode())
 
             elif self.path == '/user/images' or self.path == '/user/images/':
                 length = int(self.headers['Content-Length'])
@@ -77,14 +82,17 @@ class RequestHandler(BaseHTTPRequestHandler):
                 self._set_headers()
                 self.wfile.write(json.dumps(response).encode())
             else:
-                self.send_code(404)
+                if self.path in self.paths_list:
+                    self.send_code(405)
+                else:
+                    self.send_code(404)
 
 
         except Exception as e:
             print(e.__class__)
             if e.__class__ == IndexError:
                 self.send_code(404)
-            elif e.__class__ == KeyError:
+            elif e.__class__ == KeyError or e.__class__ == TypeError:
                 self.send_code(400)
             else:
                 self.send_code(500)
@@ -107,6 +115,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                     response['id'] = id
                     response['username'] = body['username']
                     response["api_key"] = api_key
+                    self._set_headers()
+                    self.wfile.write(json.dumps(response).encode())
 
             # endpoints that do require authentication
             elif not self._valid_auth():
@@ -129,7 +139,10 @@ class RequestHandler(BaseHTTPRequestHandler):
                     self._set_headers()
                     self.wfile.write(json.dumps(response).encode())
                 else:
-                    self.send_code(404)
+                    if self.path in self.paths_list:
+                        self.send_code(405)
+                    else:
+                        self.send_code(404)
 
         except Exception as e:
             print(e.__class__)
@@ -166,7 +179,10 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                         self._set_headers()
                 else:
-                    self.send_code(404)
+                    if self.path in self.paths_list:
+                        self.send_code(405)
+                    else:
+                        self.send_code(404)
 
             except Exception as e:
                 print(e.__class__)
@@ -225,7 +241,10 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                         self._set_headers()
                 else:
-                    self.send_code(404)
+                    if self.path in self.paths_list:
+                        self.send_code(405)
+                    else:
+                        self.send_code(404)
 
             except Exception as e:
                 print(e.__class__)
@@ -261,9 +280,28 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                         self._set_headers()
 
-                else:
-                    self.send_code(404)
+                if self.path == '/delete/image' or self.path == 'delete/image':
+                    length = int(self.headers['Content-Length'])
+                    body = json.loads(self.rfile.read(length))
+                    img_id = body['img_id']
 
+                    query = {'img_id': img_id}
+                    result = proxy_collection.find(query)[0]
+                    if result['user_id'] != self.user_id:
+                        self.send_code(403)
+                    else:
+                        proxy_collection.delete_one(query)
+                        query = {'_id': img_id}
+                        result = images.delete_one(query)
+
+                        self._set_headers()
+
+                else:
+                    if self.path in self.paths_list:
+                        self.send_code(405)
+                    else:
+                        self.send_code(404)
+                        
             except Exception as e:
                 print(e.__class__)
                 if e.__class__ == IndexError:
