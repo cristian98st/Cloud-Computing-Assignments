@@ -280,7 +280,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
                         self._set_headers()
 
-                if self.path == '/delete/image' or self.path == 'delete/image':
+                elif self.path == '/delete/image' or self.path == '/delete/image/':
                     length = int(self.headers['Content-Length'])
                     body = json.loads(self.rfile.read(length))
                     img_id = body['img_id']
